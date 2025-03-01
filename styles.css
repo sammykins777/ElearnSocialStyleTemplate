@@ -1,0 +1,242 @@
+/* Reset and Accessibility Basics */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.5;
+    background: #fff;
+    color: #000;
+    font-size: 16px;
+}
+
+/* Sticky Header */
+.sticky-header {
+    position: sticky;
+    top: 0;
+    background: var(--header-bg, #f8f8f8);
+    padding: 0.5rem 1rem;
+    border-bottom: 1px solid #ccc;
+    z-index: 10;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.sticky-header h1 {
+    font-size: 1.25rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+.badge {
+    padding: 0.2rem 0.5rem;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    color: var(--badge-text-color, #000);
+}
+
+/* Banner and Avatar */
+.banner {
+    position: relative;
+    height: 200px;
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+#banner-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.avatar {
+    position: absolute;
+    bottom: 5px;
+    left: 20px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    object-fit: cover;
+    z-index: 111;
+}
+
+/* Profile Bar (Sticky Nav) */
+.profile-bar.sticky-nav {
+    position: sticky;
+    top: 60px;
+    background: var(--header-bg, #f8f8f8);
+    padding: 1rem;
+    border-bottom: 1px solid #ccc;
+    max-width: 1200px;
+    margin: 0 auto;
+    z-index: 9;
+}
+.profile-bar ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.profile-bar a {
+    text-decoration: none;
+    padding: 0.5rem;
+    color: #000;
+}
+.profile-bar a:focus {
+    outline: 2px solid #000;
+}
+
+/* Main Content */
+main {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.post {
+    border: 1px solid #ccc;
+    padding: 1rem;
+    margin-bottom: -1px;
+}
+.post h1, .post h2 {
+    margin-bottom: 0.5rem;
+    color: var(--title-color);
+}
+.post p {
+    color: var(--text-color);
+    margin-bottom: 0.5rem;
+}
+.post img, .post video {
+    height: 300px;
+    width: auto;
+    max-width: 100%;
+    object-fit: cover;
+    object-position: center;
+    margin-top: 0.5rem;
+    border-radius: 8px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+/* Video Embed Container */
+.video-embed-container {
+    position: relative;
+    width: 50%; /* 50% of post container */
+    max-width: 100%; /* Prevents overflow */
+    padding-bottom: 28.125%; /* 16:9 aspect ratio (56.25% / 2) at 50% width */
+    height: 0;
+    margin: 0.5rem auto; /* Centered with consistent spacing */
+    border-radius: 8px; /* Restored rounded corners */
+    overflow: hidden;
+}
+.video-embed-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px; /* Ensures iframe matches container */
+}
+
+/* Quiz Post */
+.quiz-post form {
+    margin-top: 1rem;
+    border: none;
+}
+fieldset {
+    border-style: none;
+    margin-bottom: 20px;
+}
+label {
+    margin-right: 10px;
+}
+main .post.quiz-post fieldset {
+    border: 0 !important;
+    border-width: 0 !important;
+    border-style: none !important;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    background: none;
+}
+.quiz-post legend {
+    margin-bottom: 1rem;
+    font-weight: bold;
+    padding: 0;
+    border: none;
+}
+.quiz-post label {
+    display: block;
+    margin: 0.75rem 0;
+}
+.quiz-post input[type="radio"] {
+    margin-right: 1rem;
+}
+.quiz-post button {
+    margin-top: 2rem;
+}
+
+/* Buttons */
+button {
+    padding: 0.5rem 1rem;
+    background: var(--button-bg);
+    color: var(--button-text);
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+}
+button:focus {
+    outline: 2px solid #000;
+}
+footer {
+    text-align: center;
+    padding: 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .profile-bar, .sticky-header {
+        text-align: center;
+    }
+    .profile-bar ul {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    .sticky-header {
+        flex-direction: column;
+    }
+    .avatar {
+        bottom: 5px;
+    }
+    .profile-bar.sticky-nav {
+        top: 80px;
+    }
+    .post img, .post video {
+        height: 200px;
+    }
+    .banner {
+        padding-bottom: 50px;
+    }
+    .quiz-post fieldset {
+        padding: 1rem;
+        margin-bottom: 1.5rem;
+    }
+    .quiz-post label {
+        margin: 0.5rem 0;
+    }
+    .quiz-post button {
+        margin-top: 1.5rem;
+    }
+    .video-embed-container {
+        padding-bottom: 18.75%; /* Adjusted for smaller height (approx 200px) */
+    }
+}
+
+/* Hide avatar when nav is sticky */
+.sticky-nav.stuck .avatar {
+    display: none;
+}
