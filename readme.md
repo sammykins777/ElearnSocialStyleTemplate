@@ -1,7 +1,7 @@
-# SCORM Course - "Mind of Jane" README
+# SCORM Course - "Elearn Social Style Template" README
 
 ## Overview
-This is a simple SCORM-compliant course featuring Jane's remote work tips. The course is designed to be easily customizable by non-coders through the `data.js` file. This course has been tested and verified to work in SCORM Cloud.
+This is a simple SCORM-compliant course featuring Jane's remote work tips as an example. The course is designed to be easily customizable by non-coders through the `data.js` file. This course has been tested and verified to work in SCORM Cloud.
 
 ## Getting Started
 
@@ -158,13 +158,13 @@ When editing the `data.js` file, you can use several special characters and HTML
 
 ## Line Breaks
 
-To create a line break in your text, use the `\n` character:
+To create a line break in your text, use the `<br>` character:
 
 ```javascript
 {
     title: "About Me 🙍‍♀️",
     type: "title-text",
-    text: "I have worked from home since 2015.\nNo office, no problem—just results."
+    text: "I have worked from home since 2015.<br>No office, no problem—just results."
 }
 ```
 
@@ -234,7 +234,7 @@ You can combine these formatting methods:
 {
     title: "Complete Guide",
     type: "title-text",
-    text: "<b>Remote Work Tips:</b>\n\n<ul><li>Create a <i>dedicated</i> workspace</li><li>Take regular breaks</li><li>Visit <a href='https://workremote.tips'>workremote.tips</a> for more</li></ul>"
+    text: "<b>Remote Work Tips:</b><br><ul><li>Create a <i>dedicated</i> workspace</li><li>Take regular breaks</li><li>Visit <a href='https://workremote.tips'>workremote.tips</a> for more</li></ul>"
 }
 ```
 
