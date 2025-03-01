@@ -75,7 +75,7 @@ const data = {
         {
             title: "Resources 📚",
             type: "title-text",
-            text: "Check out <a href='https://remotework.com'>remotework.com</a> for more tips."
+            text: "Check out <a href='#'>remotework.com</a> (doesn't go anywhere) for more tips."
         }
     ]
 };
