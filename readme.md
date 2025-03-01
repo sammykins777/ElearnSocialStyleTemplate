@@ -152,7 +152,98 @@ To add a new section, copy an existing section of the same type, paste it before
     text: "Here are some books and websites I recommend for remote work mastery."
 }
 ```
+# Formatting Examples for data.js
 
+When editing the `data.js` file, you can use several special characters and HTML tags to format text within the quote marks. Here are some useful examples:
+
+## Line Breaks
+
+To create a line break in your text, use the `\n` character:
+
+```javascript
+{
+    title: "About Me 🙍‍♀️",
+    type: "title-text",
+    text: "I have worked from home since 2015.\nNo office, no problem—just results."
+}
+```
+
+This will display as:
+```
+I have worked from home since 2015.
+No office, no problem—just results.
+```
+
+## HTML Formatting
+
+You can use basic HTML tags inside your text for more formatting options:
+
+### Bold Text
+```javascript
+{
+    title: "Workspace 💻",
+    type: "title-text", 
+    text: "Set up a spot. <b>Desk or couch</b>, make it yours!"
+}
+```
+
+### Italic Text
+```javascript
+{
+    title: "Routine ⏰",
+    type: "title-text",
+    text: "Start your day right. <i>Coffee, stretch, go.</i>"
+}
+```
+
+### Links
+```javascript
+{
+    title: "Resources 📚",
+    type: "title-text",
+    text: "Check out <a href='https://remotework.com'>this website</a> for more tips."
+}
+```
+
+### Lists
+```javascript
+{
+    title: "Daily Checklist",
+    type: "title-text",
+    text: "<ul><li>Check email</li><li>Review calendar</li><li>Set priorities</li></ul>"
+}
+```
+
+## Escaping Special Characters
+
+If you need to use quotes within quotes, you must escape them with a backslash:
+
+```javascript
+{
+    title: "Jane's Quote",
+    type: "title-text",
+    text: "Jane always says \"Working remotely is all about balance.\""
+}
+```
+
+## Combining Multiple Formatting Elements
+
+You can combine these formatting methods:
+
+```javascript
+{
+    title: "Complete Guide",
+    type: "title-text",
+    text: "<b>Remote Work Tips:</b>\n\n<ul><li>Create a <i>dedicated</i> workspace</li><li>Take regular breaks</li><li>Visit <a href='https://workremote.tips'>workremote.tips</a> for more</li></ul>"
+}
+```
+
+## Important Notes
+
+1. Some HTML formatting may affect the styling of your course.
+2. Always test your changes to ensure they display correctly.
+3. More complex formatting might require editing the CSS file.
+4. Be consistent with your formatting throughout the course.
 ## Testing Your Changes
 
 After saving your changes to `data.js`, reload the course in your browser to see the updates. If something doesn't look right, double-check for missing commas, quotes, or braces.

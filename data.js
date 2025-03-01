@@ -25,17 +25,17 @@ const data = {
         {
             title: "About Me 🙍‍♀️",
             type: "title-text",
-            text: "I have worked from home since 2015. No office, no problem—just results."
+            text: "I have worked from home since 2015.<br> No office, no problem—just results."
         },
         {
             title: "Workspace 💻",
-            type: "title-text",
-            text: "Set up a spot. Desk or couch, make it yours!"
+            type: "title-text", 
+            text: "Set up a spot. <b>Desk or couch</b>, make it yours!"
         },
         {
             title: "Routine ⏰",
             type: "image-text",
-            text: "Start your day right. Coffee, stretch, go.",
+            text: "Start your day right. <i>Coffee, stretch, go.</i>",
             mediaUrl: "images/coffee-mug.jpg",
             alt: "Coffee mug on a desk"
         },
@@ -45,10 +45,10 @@ const data = {
             text: "Step away. Five minutes saves burnout.Time for another cup!"
         },
         {
-            title: "Jane’s Video Tip 📝",
+            title: "Remote Hacks from a Fellow Pro 📝",
             type: "video-embed",
-            text: "Check out my quick guide to staying productive remotely!",
-            embedUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+            text: "Check out this guide to staying productive remotely!",
+            embedUrl: "https://www.youtube.com/embed/eBZpH8_cLE0?si=gRrEDoR4Hv4XHvI4",
             alt: "Jane’s productivity video"
         },
         {
@@ -71,6 +71,11 @@ const data = {
             title: "Remote Wrap-Up 🙋‍♀️",
             type: "summary",
             text: "That’s my remote work crash course! You’ve got this."
+        },
+        {
+            title: "Resources 📚",
+            type: "title-text",
+            text: "Check out <a href='https://remotework.com'>remotework.com</a> for more tips."
         }
     ]
 };
